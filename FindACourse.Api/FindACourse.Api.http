@@ -1,0 +1,6 @@
+@FindACourse.Api_HostAddress = http://localhost:5124
+
+GET {{FindACourse.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
