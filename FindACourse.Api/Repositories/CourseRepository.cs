@@ -1,6 +1,6 @@
 ﻿using Dapper;
-using FindACourse.Api.Controllers;
 using FindACourse.Api.Entities;
+using FindACourse.Api.Models;
 using Microsoft.Data.Sqlite;
 
 namespace FindACourse.Api.Repositories
@@ -35,7 +35,7 @@ namespace FindACourse.Api.Repositories
             return (Courses: courses, TotalItems: totalCount);
         }
 
-        public async Task PostContactUsDataAsync(ContactUs contactUs)
+        public async Task PostContactUsDataAsync(ContactUsModel contactUs)
         {
             using var connection = new SqliteConnection(connectionString);
             connection.Open();

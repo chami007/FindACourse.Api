@@ -32,31 +32,12 @@ namespace FindACourse.Api.Controllers
             return Ok(new Response<IEnumerable<Course>>(Courses, TotalItems, message));
         }
 
-        // GET api/<CoursesController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
-
         // POST api/<CoursesController>
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] ContactUs contactUs)
+        public async Task<IActionResult> Post([FromBody] ContactUsModel contactUs)
         {
             await this.courseRepository.PostContactUsDataAsync(contactUs);
             return Ok();
-        }
-
-        // PUT api/<CoursesController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/<CoursesController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
         }
     }
 }

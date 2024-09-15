@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace FindACourse.Api.Controllers
+namespace FindACourse.Api.Models
 {
-    public class ContactUs
+    public class ContactUsModel
     {
         [Required]
         public required string CourseId { get; set; }
